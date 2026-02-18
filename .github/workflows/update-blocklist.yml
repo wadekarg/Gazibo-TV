@@ -1,0 +1,44 @@
+name: Update Blocklist
+
+on:
+  schedule:
+    - cron: '0 6 * * 0'  # Every Sunday at 6:00 UTC
+  workflow_dispatch:  # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-blocklist:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run stream tester
+        run: |
+          python3 test_streams.py us in uk ca au de fr br mx jp kr es it pk bd ru tr ae sa eg za ph id th vn pl nl pt ar co
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet blocklist.json || echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add blocklist.json
+          git commit -m "chore: update blocklist ($(date -u +%Y-%m-%d))"
+          git push

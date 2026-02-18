@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gazibo TV - Free IPTV Channels</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <h1 class="logo">
+        <span class="logo-icon">📺</span>
+        <span class="logo-text">Gazibo <span class="logo-accent">TV</span></span>
+      </h1>
+    </div>
+    <div class="header-center">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" placeholder="Search channels… ( / )" autocomplete="off">
+        <span class="search-clear" id="search-clear">&times;</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <span class="channel-count" id="channel-count"></span>
+      <button class="btn-icon" id="btn-shortcuts" title="Keyboard shortcuts">⌨️</button>
+    </div>
+  </header>
+
+  <nav class="country-tabs" id="country-tabs">
+    <div class="tabs-scroll" id="tabs-scroll"></div>
+  </nav>
+
+  <div class="filters" id="filters">
+    <button class="filter-pill active" data-category="all">All</button>
+    <button class="filter-pill" data-category="news">News</button>
+    <button class="filter-pill" data-category="sports">Sports</button>
+    <button class="filter-pill" data-category="entertainment">Entertainment</button>
+    <button class="filter-pill" data-category="music">Music</button>
+    <button class="filter-pill" data-category="kids">Kids</button>
+    <button class="filter-pill" data-category="movies">Movies</button>
+    <button class="filter-pill" data-category="documentary">Documentary</button>
+    <button class="filter-pill" data-category="religious">Religious</button>
+    <button class="filter-pill" data-category="other">Other</button>
+  </div>
+
+  <main class="channel-grid" id="channel-grid"></main>
+
+  <div class="loading-overlay" id="loading-overlay">
+    <div class="spinner"></div>
+    <p class="loading-text">Loading channels…</p>
+  </div>
+
+  <div class="error-banner" id="error-banner">
+    <span class="error-text" id="error-text"></span>
+    <button class="error-close" id="error-close">&times;</button>
+  </div>
+
+  <div class="player-overlay" id="player-overlay">
+    <div class="player-container">
+      <div class="player-header">
+        <div class="player-channel-info">
+          <img class="player-logo" id="player-logo" src="" alt="">
+          <div>
+            <h2 class="player-channel-name" id="player-channel-name"></h2>
+            <span class="player-category" id="player-category"></span>
+          </div>
+        </div>
+        <div class="player-controls">
+          <button class="btn-icon" id="btn-prev" title="Previous (↑)">⏮</button>
+          <button class="btn-icon" id="btn-next" title="Next (↓)">⏭</button>
+          <button class="btn-icon" id="btn-fullscreen" title="Fullscreen (f)">⛶</button>
+          <button class="btn-icon btn-close" id="btn-close" title="Close (Esc)">&times;</button>
+        </div>
+      </div>
+      <div class="player-video-wrap">
+        <video id="video-player" autoplay></video>
+        <div class="player-loading" id="player-loading">
+          <div class="spinner"></div>
+        </div>
+        <div class="player-error" id="player-error">
+          <p id="player-error-text">Stream unavailable</p>
+          <span class="auto-skip-countdown" id="auto-skip-countdown"></span>
+          <div class="player-error-actions">
+            <button class="btn-retry" id="btn-retry">Retry</button>
+            <button class="btn-skip" id="btn-skip">Skip Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="shortcuts-modal" id="shortcuts-modal">
+    <div class="shortcuts-content">
+      <h3>Keyboard Shortcuts</h3>
+      <button class="btn-close modal-close" id="modal-close">&times;</button>
+      <div class="shortcut-list">
+        <div class="shortcut-item"><kbd>↑</kbd><kbd>↓</kbd> Previous / Next channel</div>
+        <div class="shortcut-item"><kbd>←</kbd><kbd>→</kbd> Navigate grid</div>
+        <div class="shortcut-item"><kbd>Enter</kbd> Play focused channel</div>
+        <div class="shortcut-item"><kbd>Esc</kbd> Close player / Clear search</div>
+        <div class="shortcut-item"><kbd>/</kbd> Focus search</div>
+        <div class="shortcut-item"><kbd>f</kbd> Toggle fullscreen</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/countries.js"></script>
+  <script src="js/m3u-parser.js"></script>
+  <script src="js/api-data.js"></script>
+  <script src="js/channel-store.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/keyboard.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
