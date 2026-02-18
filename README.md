@@ -1,34 +1,45 @@
+<div align="center">
+
 # Gazibo TV
 
-A beautiful, TV-like web interface for watching free IPTV channels from around the world. No sign-ups, no downloads - just open and watch.
+### Free IPTV from around the world. No sign-ups, no downloads — just open and watch.
 
-**[Live Demo](https://wadekarg.github.io/Gazibo-TV)**
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Gazibo%20TV-00d4ff?style=for-the-badge&logo=github)](https://wadekarg.github.io/Gazibo-TV)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+[![Channels](https://img.shields.io/badge/Channels-8000+-ff6b35?style=for-the-badge)](https://github.com/iptv-org/iptv)
+[![Countries](https://img.shields.io/badge/Countries-40+-9b59b6?style=for-the-badge)](https://github.com/iptv-org/iptv)
 
-![Gazibo TV Screenshot](screenshots/preview.png)
+<br>
+
+![Gazibo TV - Channel Grid](screenshots/gazibo_tv.png)
+
+![Gazibo TV - Live Sports](screenshots/gazibo_sports_channel.png)
+
+</div>
+
+---
 
 ## Features
 
-- 8,000+ free channels from 40+ countries
-- Dark theme with glass-morphism UI
-- Channel data sourced from [iptv-org/iptv](https://github.com/iptv-org/iptv) - the largest community-maintained IPTV playlist
-- Enriched with [iptv-org API](https://github.com/iptv-org/api) for accurate logos, categories, and metadata
-- NSFW and DMCA-blocked channels automatically filtered out
-- Pre-tested blocklist removes known broken streams (auto-updated weekly via GitHub Actions)
-- Auto-skip broken channels with 5-second countdown
-- Broken stream tracking - remembers failed channels so they appear last
-- Country tabs with flag emojis (India & USA pinned first)
-- Category filters: News, Sports, Entertainment, Music, Kids, Movies, Documentary, Religious
-- Search across channel names and groups
-- HLS.js video player with Safari native fallback
-- Keyboard navigation for a true TV experience
-- Auto-refresh every hour to pick up newly added channels
-- Responsive design: desktop, tablet, and mobile
-- No frameworks, no build tools - pure HTML + CSS + JavaScript
+| | Feature |
+|---|---------|
+| **Channels** | 8,000+ free channels from 40+ countries |
+| **Design** | Dark theme with glass-morphism UI |
+| **Smart Filtering** | NSFW and DMCA-blocked channels automatically filtered out |
+| **Reliability** | Pre-tested blocklist removes broken streams (auto-updated weekly) |
+| **Auto-Skip** | Broken channels skipped automatically with 5-second countdown |
+| **Categories** | News, Sports, Entertainment, Music, Kids, Movies, Documentary, Religious |
+| **Search** | Search across channel names and groups |
+| **Player** | HLS.js video player with Safari native fallback |
+| **Keyboard** | Full keyboard navigation for a true TV experience |
+| **Fresh Data** | Auto-refresh every hour to pick up newly added channels |
+| **Responsive** | Works on desktop, tablet, and mobile |
+| **Lightweight** | No frameworks, no build tools — pure HTML + CSS + JavaScript |
 
 ## Keyboard Shortcuts
 
 | Key | Action |
-|-----|--------|
+|:---:|--------|
 | `Up` / `Down` | Previous / Next channel (in player) |
 | `Left` / `Right` | Navigate channel grid |
 | `Enter` | Play focused channel |
@@ -40,7 +51,9 @@ A beautiful, TV-like web interface for watching free IPTV channels from around t
 
 ### Option 1: GitHub Pages (Recommended)
 
-Just visit the live demo link above. Nothing to install.
+Visit the live demo — nothing to install:
+
+> **https://wadekarg.github.io/Gazibo-TV**
 
 ### Option 2: Run Locally
 
@@ -99,11 +112,13 @@ Gazibo-TV/
 
 ## Tech Stack
 
-- **Frontend:** Pure HTML5 + CSS3 + JavaScript (ES6+)
-- **Video:** [HLS.js](https://github.com/video-dev/hls.js/) via CDN
-- **Data:** [iptv-org/iptv](https://github.com/iptv-org/iptv) + [iptv-org/api](https://github.com/iptv-org/api)
-- **Hosting:** GitHub Pages (free)
-- **CI/CD:** GitHub Actions
+| Layer | Technology |
+|-------|-----------|
+| **Frontend** | Pure HTML5 + CSS3 + JavaScript (ES6+) |
+| **Video** | [HLS.js](https://github.com/video-dev/hls.js/) via CDN |
+| **Data** | [iptv-org/iptv](https://github.com/iptv-org/iptv) + [iptv-org/api](https://github.com/iptv-org/api) |
+| **Hosting** | GitHub Pages (free) |
+| **CI/CD** | GitHub Actions |
 
 ## Updating the Blocklist
 
@@ -139,11 +154,25 @@ Contributions are welcome! Here's how:
 
 MIT License - see [LICENSE](LICENSE) for details.
 
-## Credits
+## Acknowledgements
 
-- Channel data: [iptv-org/iptv](https://github.com/iptv-org/iptv) community
-- Video player: [HLS.js](https://github.com/video-dev/hls.js/)
+This project is made possible by the amazing [iptv-org](https://github.com/iptv-org) community. A huge thank you to:
+
+- **[iptv-org/iptv](https://github.com/iptv-org/iptv)** — The largest open-source collection of publicly available IPTV channels from all over the world. This project provides all the channel streams that Gazibo TV plays. With 80k+ stars and thousands of contributors, it's a truly incredible community effort.
+- **[iptv-org/api](https://github.com/iptv-org/api)** — Provides the structured API data (channel metadata, logos, categories, blocklists) that makes Gazibo TV's interface rich and accurate.
+- **[iptv-org/database](https://github.com/iptv-org/database)** — The community-maintained database behind the API.
+- **[HLS.js](https://github.com/video-dev/hls.js/)** — The JavaScript HLS client that powers video playback across all browsers.
+
+Without these open-source projects, Gazibo TV would not exist.
 
 ## Disclaimer
 
 This project does not host any video content. It simply provides an interface to publicly available IPTV streams aggregated by the [iptv-org](https://github.com/iptv-org) community. All channel data and streams are sourced from third parties. If you believe any content infringes on your rights, please report it to [iptv-org/database](https://github.com/iptv-org/database/issues).
+
+---
+
+<div align="center">
+
+Made with love by [wadekarg](https://github.com/wadekarg)
+
+</div>
