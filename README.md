@@ -2,7 +2,7 @@
 
 A beautiful, TV-like web interface for watching free IPTV channels from around the world. No sign-ups, no downloads - just open and watch.
 
-**[Live Demo](https://wadekarg.github.io/Gazibo-TV)**
+**[Live Demo link](https://wadekarg.github.io/Gazibo-TV)**
 
 ![Gazibo TV Screenshot](screenshots/preview.png)
 
