@@ -165,9 +165,45 @@ This project is made possible by the amazing [iptv-org](https://github.com/iptv-
 
 Without these open-source projects, Gazibo TV would not exist.
 
-## Disclaimer
+## Legal Notice & Disclaimer
 
-This project does not host any video content. It simply provides an interface to publicly available IPTV streams aggregated by the [iptv-org](https://github.com/iptv-org) community. All channel data and streams are sourced from third parties. If you believe any content infringes on your rights, please report it to [iptv-org/database](https://github.com/iptv-org/database/issues).
+**Gazibo TV does not host, store, transcode, or control any video content.** This project is a client-side web application (a video player interface) that links to publicly available IPTV streams aggregated by the [iptv-org](https://github.com/iptv-org) community. All streams are provided by third-party servers that are not operated by, affiliated with, or controlled by this project or its contributors.
+
+This software is provided "as is" for educational and personal use. The developers make no representations about the legality of any streams accessible through this interface. **Users are solely responsible for ensuring their use of this software complies with all applicable laws in their jurisdiction.**
+
+### Content Filtering
+
+Gazibo TV proactively filters content to promote responsible use:
+- **DMCA-blocked channels** are automatically removed using [iptv-org's blocklist](https://github.com/iptv-org/database/blob/master/data/blocklist.csv)
+- **NSFW content** is automatically filtered out
+- **Broken/dead streams** are detected and deprioritized
+
+### DMCA Policy
+
+We respect the intellectual property rights of others. If you believe that any content accessible through Gazibo TV infringes your copyright, you can take the following actions:
+
+1. **Report to the source:** Since all channel data originates from [iptv-org](https://github.com/iptv-org), the most effective action is to file a report at [iptv-org/database issues](https://github.com/iptv-org/database/issues). Once they remove a channel, it will automatically be removed from Gazibo TV.
+
+2. **Report directly to us:** Open an issue on this repository with:
+   - The copyrighted work you believe is being infringed
+   - The specific stream URL(s) you want removed
+   - Your contact information
+   - A statement that you are the copyright owner or authorized to act on their behalf
+
+   We will remove the reported content within **24 hours** of receiving a valid notice.
+
+### What This Project Is NOT
+
+- This is **not** a streaming service — we do not operate any servers that deliver video
+- This is **not** a commercial product — there are no ads, subscriptions, or payments
+- This is **not** a content aggregator — we do not collect, curate, or upload any streams ourselves
+- This is a **software tool** (like VLC or any web browser) that can play publicly available media URLs
+
+## License
+
+MIT License - see [LICENSE](LICENSE) for details.
+
+The MIT license covers the **software code only**. It does not grant any rights to the content (video streams, channel logos, metadata) accessible through this software, which is owned by their respective rights holders.
 
 ---
 
